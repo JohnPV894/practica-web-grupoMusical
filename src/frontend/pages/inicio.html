@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arctic Monkeys</title>
+  <link rel="stylesheet" href="../styles/inicio.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <img src="../media/logo-removebg-preview (2).png" alt="Arctic Monkeys Logo" class="logo">
+    <nav class="nav">
+      <a href="inicio.html" class="activo">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="musica.html">Música</a>
+    </nav>
+  </header>
+
+  <!-- VIDEO SECTION -->
+  <section class="video-section">
+    <video id="main-video" class="video-bg" autoplay muted loop playsinline>
+      <source src="../media/artics_monkeys_video.mp4" type="video/mp4" />
+      Tu navegador no soporta el video.
+    </video>
+    <button id="mute-btn" aria-label="Mute/unmute video">&#128266;</button>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <h2>Recibir últimas noticias</h2>
+    <form>
+      <input type="text" placeholder="Nombres" required />
+      <input type="email" placeholder="Correo" required />
+      <input type="text" placeholder="País" required />
+      <button type="submit">Suscribirse</button>
+    </form>
+    <p class="nota">
+      Al suscribirte a la lista de correo, aceptas los Términos de uso de esta banda y la Política de privacidad de Google. Este sitio está protegido por reCAPTCHA y se aplican la política de privacidad y los términos de servicio de Google.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer >
+    <div class="footer-content">
+      <div>
+        <a href="#">Declaración de privacidad</a> |
+        <a href="#">Política de cookies</a> |
+        <a href="#">Configuración de cookies</a>
+      </div>
+      <div>
+        <a href="#">Aviso legal</a> |
+        <a href="#">Mapa del sitio</a> |
+        <a href="#">Contacto</a>
+      </div>
+    </div>
+    <p class="copyright">© 2025. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const video = document.getElementById('main-video');
+    const muteBtn = document.getElementById('mute-btn');
+
+    muteBtn.addEventListener('click', () => {
+      video.muted = !video.muted;
+      muteBtn.textContent = video.muted ? '🔇' : '🔊';
+    });
+  </script>
+
+</body>
+</html>

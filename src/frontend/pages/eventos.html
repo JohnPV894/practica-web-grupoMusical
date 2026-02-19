@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eventos - Arctic Monkeys</title>
+  <link rel="stylesheet" href="../styles/eventos.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <img src="../media/logo-removebg-preview (2).png" alt="Arctic Monkeys Logo" class="logo">
+    <nav class="nav" id="main-nav">
+      <a href="inicio.html">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="eventos.html" class="activo">Eventos</a>
+      <a href="musica.html">Música</a>
+    </nav>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </header>
+
+  <!-- MENU LATERAL -->
+  <aside class="menu-lateral oculto" id="side-menu">
+    <button onclick="toggleMenu()">✕</button>
+    <ul>
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="tienda.html">Tienda</a></li>
+      <li><a href="eventos.html" class="activo">Eventos</a></li>
+      <li><a href="musica.html">Música</a></li>
+    </ul>
+  </aside>
+
+  <!-- EVENT SECTION -->
+  <section class="evento">
+    <h1>PRÓXIMO CONCIERTO</h1>
+    <div class="evento-contenido">
+      <img src="../media/fotosAM.jpg" alt="Arctic Monkeys">
+      <div class="evento-info">
+        <h2>Arctic Monkeys</h2>
+        <p>
+          Arctic Monkeys es una banda británica de rock alternativo formada en Sheffield en 2002.
+          Conocidos por su estilo distintivo y letras ingeniosas, su álbum debut "Whatever People Say I Am, That’s What I’m Not" (2006)
+          es considerado uno de los álbumes más vendidos en la historia del Reino Unido.
+        </p>
+        <p>
+          El nombre de la banda proviene de una idea del guitarrista Jamie Cook, quien dijo que los "Monos del Ártico"
+          era “una ocurrencia durante una conversación”.
+        </p>
+        <button onclick="window.location.href='https://seatpick.com/es/entradas-arctic-monkeys'">Comprar Entrada</button>
+      </div>
+    </div>
+    <div class="evento-datos">
+      <p><strong>Fecha:</strong> 11/03/2025</p>
+      <p><strong>Hora:</strong> 11:03 PM</p>
+      <p><strong>Lugar:</strong> Discoteca Capitol, Calle del Coure 19, Vigo</p>
+      <p><strong>Precio:</strong> 49€</p>
+    </div>
+  </section>
+
+  <footer >
+    <div class="footer-content">
+      <div>
+        <a href="#">Declaración de privacidad</a> |
+        <a href="#">Política de cookies</a> |
+        <a href="#">Configuración de cookies</a>
+      </div>
+      <div>
+        <a href="#">Aviso legal</a> |
+        <a href="#">Mapa del sitio</a> |
+        <a href="#">Contacto</a>
+      </div>
+    </div>
+    <p class="copyright">© 2025. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('side-menu');
+
+    function toggleMenu() {
+      menu.classList.toggle('oculto');
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  background-color: #3E4330;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+    display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+
+/* HEADER */
+.header {
+  background-color: #3e433033;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2em 2em;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  max-height: 70px;
+}
+
+.nav {
+  display: flex;
+  gap: 2em;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.nav a.activo {
+  border-bottom: 2px solid #efefef;
+}
+
+.nav a:hover {
+  border-top: 2px solid #efefef;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+}
+
+/* CONTENIDO */
+.musica {
+  padding: 2em 1em;
+}
+
+/* SECCIÓN PRINCIPAL */
+.contenedor-principal {
+  background-color: white;
+  color: #222;
+  padding: 2em;
+  border-radius: 12px;
+  margin-bottom: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3em;
+  flex-wrap: wrap;
+}
+
+.izquierda {
+  text-align: center;
+}
+
+.imagen-cancion {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 1rem;
+}
+
+.izquierda p {
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+.boton-play {
+  background-color: #ffed00;
+  border: none;
+  border-radius: 50%;
+  padding: 0.8em 1em;
+  font-size: 1.5rem;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+.derecha {
+  flex: 1;
+  min-width: 280px;
+}
+
+.titulo-lista {
+  font-size: 1.4rem;
+  margin-bottom: 1em;
+  font-family: 'Anton', sans-serif;
+}
+
+.lista-canciones {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-canciones li {
+  display: grid;
+  grid-template-columns: 30px 50px 1fr auto;
+  align-items: center;
+  gap: 1em;
+  padding: 0.8em 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 1rem;
+}
+.lista-canciones img {
+  width: 40px;
+}
+
+/* FORMULARIO */
+.formulario {
+  background-image: url('../media/fondoForm.png');
+  background-size: cover;
+  background-position: center;
+  padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  border-radius: 12px;
+  margin-bottom: 3em;
+}
+
+.formulario h2 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.8em;
+  border: none;
+  border-radius: 5px;
+}
+
+.formulario label {
+  max-width: 400px;
+  color: white;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #1a1a1a;
+  padding: 2em 1em;
+  text-align: center;
+  font-size: 0.85em;
+  color: #aaa;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  margin-bottom: 1em;
+}
+
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 0.3em;
+}
+
+.footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.copy {
+  font-size: 0.75em;
+}
+
+/* MENU LATERAL */
+.menu-lateral {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  background: white;
+  height: 100%;
+  width: 250px;
+  padding: 2em;
+  z-index: 999;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  margin-top: 2em;
+}
+
+.menu-lateral ul li {
+  margin: 1em 0;
+}
+
+.menu-lateral ul li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+}
+
+.menu-lateral button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  float: right;
+  cursor: pointer;
+}
+
+.oculto {
+  display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .contenedor-principal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formulario input {
+    max-width: 90%;
+  }
+
+  .lista-canciones li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* NEWSLETTER */
+.newsletter {
+  padding: 4em 2em;
+  background: url('../media/fondoForm.png') no-repeat center center/cover;
+  text-align: center;
+  position: relative;
+}
+
+.newsletter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.382);
+  z-index: 0;
+}
+
+.newsletter h2 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1em;
+  font-size: 2rem;
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter input {
+  padding: 0.9em;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  background: #f2f2f2;
+}
+
+.newsletter button {
+  background-color: #e0e000;
+  border: none;
+  padding: 0.9em;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.newsletter button:hover {
+  background-color: #c8c800;
+}
+
+.nota {
+  font-size: 0.75em;
+  color: #ccc;
+  margin-top: 2em;
+  max-width: 600px;
+  margin-inline: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* FOOTER */
+.footer {
+      margin: 0;
+      padding: 0;
+  background-color: #1a1a1a;
+  padding: 2em 1em;
+  font-size: 0.85em;
+  color: #aaa;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  margin-bottom: 1em;
+}
+
+.footer-content a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 0.3em;
+  transition: color 0.2s;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+  color: white;
+}

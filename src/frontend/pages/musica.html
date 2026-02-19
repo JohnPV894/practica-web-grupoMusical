@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Música - Arctic Monkeys</title>
+  <link rel="stylesheet" href="../styles/musica.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <img src="../media/logo-removebg-preview (2).png" alt="Logo" class="logo">
+    <nav class="nav" id="main-nav">
+      <a href="inicio.html">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="musica.html" class="activo">Música</a>
+    </nav>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </header>
+
+  <!-- MENU LATERAL -->
+  <aside class="menu-lateral oculto" id="side-menu">
+    <button onclick="toggleMenu()">✕</button>
+    <ul>
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="tienda.html">Tienda</a></li>
+      <li><a href="eventos.html">Eventos</a></li>
+      <li><a href="musica.html" class="activo">Música</a></li>
+    </ul>
+  </aside>
+
+  <!-- SECCIÓN MÚSICA -->
+  <main class="musica">
+    <section class="contenedor-principal">
+      <div class="izquierda">
+        <img src="../media/logoMusic.jpg" alt="Mini Reproductor" class="imagen-cancion">
+        <p>I Ain’t Quite Where I Think I Am</p>
+        <button class="boton-play" id="boton-play">&#9658;</button>
+        <audio id="audio-player" src="../media/musica1.mp3"></audio>
+      </div>
+
+      <div class="derecha">
+        <h2 class="titulo-lista">Canciones Populares</h2>
+        <ul class="lista-canciones">
+          <li><span>1</span> <img src="../media/logoMusic.jpg" alt="Logo Music"> I WANNA BE YOURS <span>3:03</span></li>
+          <li><span>2</span> <img src="../media/logoMusic.jpg" alt="Logo Music"> 505 <span>4:13</span></li>
+          <li><span>3</span> <img src="../media/logoMusic.jpg" alt="Logo Music"> Do I Wanna Know? <span>4:03</span></li>
+          <li><span>4</span> <img src="../media/logoMusic.jpg" alt="Logo Music"> R U Mine? <span>3:21</span></li>
+          <li><span>5</span> <img src="../media/logoMusic.jpg" alt="Logo Music"> Arabella <span>3:27</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <h2>Recibir últimas noticias</h2>
+    <form>
+      <input type="text" placeholder="Nombres" required />
+      <input type="email" placeholder="Correo" required />
+      <input type="text" placeholder="País" required />
+      <button type="submit">Suscribirse</button>
+    </form>
+    <p class="nota">
+      Al suscribirte a la lista de correo, aceptas los Términos de uso de esta banda y la Política de privacidad de Google. Este sitio está protegido por reCAPTCHA y se aplican la política de privacidad y los términos de servicio de Google.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <a href="#">Declaración de privacidad</a> |
+        <a href="#">Política de cookies</a> |
+        <a href="#">Configuración de cookies</a>
+      </div>
+      <div>
+        <a href="#">Aviso legal</a> |
+        <a href="#">Mapa del sitio</a> |
+        <a href="#">Contacto</a>
+      </div>
+    </div>
+    <p class="copyright">© 2025. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('side-menu');
+    const botonPlay = document.getElementById('boton-play');
+    const audio = document.getElementById('audio-player');
+
+    function toggleMenu() {
+      menu.classList.toggle('oculto');
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+
+    botonPlay.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        botonPlay.textContent = '❚❚';
+      } else {
+        audio.pause();
+        botonPlay.textContent = '▶';
+      }
+    });
+  </script>
+
+</body>
+</html>
