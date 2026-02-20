@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arctic Monkeys</title>
   <link rel="stylesheet" href="../styles/inicio.css" />
+  <link rel="stylesheet" href="../styles/seccionesPrincipales.css">
 </head>
 <body>
 
@@ -17,6 +18,11 @@
       <a href="eventos.html">Eventos</a>
       <a href="musica.html">Música</a>
     </nav>
+    <div class="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
   <!-- VIDEO SECTION -->
@@ -61,13 +67,13 @@
 
   <script>
     const video = document.getElementById('main-video');
-    const muteBtn = document.getElementById('mute-btn');
+    const botonSonido = document.getElementById('mute-btn');
 
-    muteBtn.addEventListener('click', () => {
+    botonSonido.addEventListener('click', () => {
       video.muted = !video.muted;
-      muteBtn.textContent = video.muted ? '🔇' : '🔊';
+      botonSonido.textContent = video.muted ? '🔇' : '🔊';
     });
   </script>
-
+  <script src="../scripts/menuHamburguesa.js"></script>
 </body>
 </html>
