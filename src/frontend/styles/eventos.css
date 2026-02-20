@@ -63,7 +63,6 @@ body {
   left: 0;
 }
 
-/* ================= HERO EVENTO ================= */
 
 .evento {
   background-color: var(--yellow);
@@ -152,32 +151,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* ================= FOOTER ================= */
-
-footer {
-  background-color: var(--footer-gray);
-  padding: 3rem 5%;
-  font-size: 0.9rem;
-  color: #ccc;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.footer-content a {
-  color: #ccc;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.footer-content a:hover {
-  color: white;
-}
 
 .copyright {
   text-align: center;

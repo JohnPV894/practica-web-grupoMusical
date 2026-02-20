@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tienda - Arctic Monkeys</title>
+  <link rel="icon" href="../media/logo-removebg-preview (2).png" type="image/x-icon">
   <link rel="stylesheet" href="../styles/tienda.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../styles/seccionesPrincipales.css">
@@ -11,16 +12,13 @@
 </head>
 <body>
 
-  <header class="encabezado">
-    <img src="../media/logo-removebg-preview (2).png" alt="Logo Arctic Monkeys" class="logo">
-    <nav class="navegacion">
-
-      <ul class="enlaces">
-        <li><a href="inicio.html">Inicio</a></li>
-        <li><a href="tienda.html" class="activo">Tienda</a></li>
-        <li><a href="eventos.html">Eventos</a></li>
-        <li><a href="musica.html">Música</a></li>
-      </ul>
+  <header class="header">
+    <img src="../media/logo-removebg-preview (2).png" alt="Arctic Monkeys Logo" class="logo">
+    <nav class="nav">
+      <a href="inicio.html" class="activo">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="musica.html">Música</a>
     </nav>
     <div class="hamburger-menu">
       <span></span>
@@ -29,15 +27,6 @@
     </div>
   </header>
 
-  <aside class="menu-lateral oculto" id="menu-lateral">
-    <button id="cerrar-menu"><i class="fas fa-times"></i></button>
-    <ul>
-      <li> <a href= "inicio.html" >Inicio</a></li>
-      <li> <a href= "tienda.html" class="activo">Tienda</a></li>
-      <li> <a href= "eventos.html" >Eventos</a></li>
-      <li > <a href= "musica.html" >Música</a></li>
-    </ul>
-  </aside>
 
   <main class="contenido-tienda">
 
@@ -57,33 +46,33 @@
   </main>
 
 
-<div id="modal-filtros" class="modal oculto">
-  <div class="contenido-modal">
-    <button id="cerrar-modal" aria-label="Cerrar modal">&times;</button>
-    <h2>Filtros</h2>
-    <label><input type="checkbox"> Color negro</label>
-    <label><input type="checkbox"> Color blanco</label>
-    <label><input type="checkbox"> Estilo oversized</label>
-    <label><input type="checkbox"> Edición limitada</label>
-    <button class="boton-aplicar">Aplicar</button>
+  <div id="modal-filtros" class="modal oculto">
+    <div class="contenido-modal">
+      <button id="cerrar-modal" aria-label="Cerrar modal">&times;</button>
+      <h2>Filtros</h2>
+      <label><input type="checkbox"> Color negro</label>
+      <label><input type="checkbox"> Color blanco</label>
+      <label><input type="checkbox"> Estilo oversized</label>
+      <label><input type="checkbox"> Edición limitada</label>
+      <button class="boton-aplicar">Aplicar</button>
+    </div>
   </div>
-</div>
 
-<footer class="footer">
-  <div class="footer-content">
-    <div>
-      <a href="#">Declaración de privacidad</a> |
-      <a href="#">Política de cookies</a> |
-      <a href="#">Configuración de cookies</a>
+  <footer >
+    <div class="contenido_footer">
+      <div>
+        <a href="#">Declaración de privacidad</a> |
+        <a href="#">Política de cookies</a> |
+        <a href="#">Configuración de cookies</a>
+      </div>
+      <div>
+        <a href="#">Aviso legal</a> |
+        <a href="#">Mapa del sitio</a> |
+        <a href="#">Contacto</a>
+      </div>
     </div>
-    <div>
-      <a href="#">Aviso legal</a> |
-      <a href="#">Mapa del sitio</a> |
-      <a href="#">Contacto</a>
-    </div>
-  </div>
-  <p class="copyright">© 2025. Todos los derechos reservados.</p>
-</footer>
+    <p class="copyright">© 2026 Domino Records, Todos los derechos reservados.</p>
+  </footer>
 
 
 <script src="../scripts/modaltienda.js"></script>

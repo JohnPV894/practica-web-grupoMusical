@@ -1,3 +1,33 @@
+/*Pie de pagina*/
+footer {
+  background-color: #000000;
+  padding: 2em 1em;
+  font-size: 0.85em;
+  color: #aaa;
+  text-align: center;
+}
+
+.contenido_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  margin-bottom: 1em;
+}
+
+.contenido_footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 0.3em;
+  transition: color 0.2s;
+}
+
+.contenido_footer a:hover {
+  text-decoration: underline;
+  color: white;
+}
+/*Fin de estilos de pie de pagina */
+
+
 
 /*Menu hamburguesa para movil y tablet*/
 
@@ -7,21 +37,30 @@
   cursor: pointer;
   gap: 6px;
   z-index: 100;
+    padding: 10px;
+  border-radius: 50%;
+
 }
 
 .hamburger-menu span {
   width: 25px;
   height: 3px;
-  background-color: #007bff;
+  background-color: #ffffff;
   border-radius: 2px;
-  transition: all 0.3s ease;
+  transition: 300ms;
+  
 }
 
 /* Estado activo del menú hamburguesa */
 .hamburger-menu.active span {
-  background-color: #003a79;
+  background-color: #3E4330;
   transition: 300ms;
-  
+
+}
+.hamburger-menu.active{
+  background: white;
+  padding: 10px;
+  border-radius: 50%;
 }
 
 
@@ -36,6 +75,7 @@
   /* Ocultar navegación horizontal */
   .nav {
     display: none;
+    align-items: center;
   }
 
   /* Menú desplegable móvil */
