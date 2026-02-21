@@ -1,3 +1,50 @@
+/*Encabezado de pagina*/
+body{
+  background-color: #3E4330;
+}
+header{
+  display: flex;
+  padding: 1.5rem 5%;
+  padding-left: 1em;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+.logo {
+  height: 60px;
+}
+
+.nav {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: 0.3s ease;
+}
+.nav a:hover{
+  border-bottom: 0px solid #efefef;
+  border-top:  2px solid #efefef;
+}
+
+/*Fin de encabezado de pagina*/
+
+/*fuente importada*/
+.just-me-again-down-here-regular {
+  font-family: "Just Me Again Down Here", cursive;
+  /* Puedes ajustar el tamaño aquí también */
+  font-size: 3rem; 
+}
+
 /*Pie de pagina*/
 footer {
   background-color: #000000;
@@ -100,7 +147,7 @@ footer {
     padding: 0.75rem 0;
     border-bottom: 1px solid #f0f0f0;
     text-decoration: none;
-    color: #007bff;
+    color: #3E4330;
     font-weight: 700;
     transition: color 0.2s ease;
   }
@@ -110,7 +157,8 @@ footer {
   }
 
   .nav.active a:hover {
-    color: #0056b3;
+    color: #282b22;
+    transition: 200ms;
   }
 
   /* Botón de login en el menú móvil */

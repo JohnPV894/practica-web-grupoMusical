@@ -7,65 +7,30 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fdfcf9; /* Fondo claro */
+  background-color: #3E4330; 
   color: #222;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* ENCABEZADO */
 header {
-  background-color: #3E4330;
+  background-color: #3e433046;
   color: white;
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em 2em;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  height: 60px;
-}
-
-nav {
-  display: flex;
   align-items: center;
 }
 
-.enlaces {
-  display: flex;
-  list-style: none;
-  gap: 1.5em;
-}
-
-.enlaces li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.enlaces li a.activo {
-  border-bottom: 2px solid #ffffff;
-}
-.enlaces li a:hover{
-      border-top: 2px solid #ffffff;
-      border-bottom: 0px solid #ffffff;
-}
-
-.hamburguesa {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  margin-left: 1em;
-}
 
 
+.nav a:nth-child(2){
+  border-bottom: 2px solid #efefef;
+}
+
+.contenedor-main{
+  width: 100%;
+  background: white;
+
+}
 
 .oculto {
   display: none;
@@ -179,11 +144,7 @@ nav {
 
 
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
-  .enlaces {
-    display: none;
-  }
 
 
 

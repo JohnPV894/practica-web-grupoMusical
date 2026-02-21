@@ -7,6 +7,9 @@
   <link rel="icon" href="../media/logo-removebg-preview (2).png" type="image/x-icon">
   <link rel="stylesheet" href="../styles/musica.css" />
   <link rel="stylesheet" href="../styles/seccionesPrincipales.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -27,12 +30,12 @@
 
 
   <!-- SECCIÓN MÚSICA -->
-  <main class="musica">
+  <main class="musica ">
     <section class="contenedor-principal">
       <div class="izquierda">
         <img src="../media/logoMusic.jpg" alt="Mini Reproductor" class="imagen-cancion">
         <p>I Ain’t Quite Where I Think I Am</p>
-        <button class="boton-play" id="boton-play">&#9658;</button>
+        <button class="boton-play" id="boton-play"></button>
         <audio id="audio-player" src="../media/musica1.mp3"></audio>
       </div>
 
@@ -84,7 +87,7 @@
     const botonPlay = document.getElementById('boton-play');
     const audio = document.getElementById('audio-player');
 
-
+    botonPlay.textContent = '▶';
     botonPlay.addEventListener('click', () => {
       if (audio.paused) {
         audio.play();
